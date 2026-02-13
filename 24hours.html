@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - 24 Hours Package</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="main-container">
+        <div style="text-align: left; margin-bottom: 20px;">
+            <a href="index.html" style="text-decoration: none; color: #666; font-size: 0.9rem;">← Back</a>
+        </div>
+
+        <div class="payment-card" style="background: white; padding: 30px; border-radius: 20px; text-align: left; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+            
+            <h3 style="margin-top: 0;">You've selected our premium package:</h3>
+            <p style="font-weight: 700; font-size: 1.1rem; margin-bottom: 5px;">24 Hours - 7GB (Ksh 79)</p>
+            
+            <p style="font-size: 0.9rem; color: #444;">Please follow these M-Pesa payment instructions:</p>
+            
+            <div class="instructions-box" style="background: #f4f7fa; padding: 20px; border-radius: 12px; margin: 20px 0;">
+                <ol style="padding-left: 20px; margin: 0;">
+                    <li style="margin-bottom: 12px;">Go to M-Pesa on your phone</li>
+                    <li style="margin-bottom: 12px;">Select <strong>Lipa na M-Pesa</strong></li>
+                    <li style="margin-bottom: 12px;">Select <strong>Buy Goods</strong></li>
+                    <li style="margin-bottom: 12px;">
+                        Enter Till Number: <strong>8879872</strong>
+                        <button id="copyBtn" style="background: #e86375; color: white; border: none; padding: 4px 10px; border-radius: 15px; font-size: 0.75rem; cursor: pointer; margin-left: 8px;">Copy</button>
+                    </li>
+                    <li style="margin-bottom: 12px;">Enter the amount shown for your package (79)</li>
+                    <li>Enter your M-Pesa PIN and confirm <strong>Pesa to pesa agencies</strong></li>
+                </ol>
+            </div>
+            
+            <p style="font-size: 0.85rem; color: #666; text-align: center; margin-top: 20px;">
+                Your package will be activated automatically after payment
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Simple copy functionality for this page
+        document.getElementById('copyBtn').addEventListener('click', function() {
+            const till = "8879872";
+            navigator.clipboard.writeText(till).then(() => {
+                this.innerText = "Copied!";
+                setTimeout(() => { this.innerText = "Copy"; }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>
